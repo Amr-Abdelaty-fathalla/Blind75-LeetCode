@@ -32,7 +32,7 @@ class Solution:
         # return False
 
 
-        # Third Solution: hash
+        # Third Solution: hash(11 ms)
         dct_s = {}
         dct_t = {}
 
@@ -56,4 +56,42 @@ class Solution:
                 return False
 
         return True  
+        
+
+        #Leet Code Solutions:
+        # First Solution:
+        # counter = {}
+
+        # if len(s) != len(t):
+        #     return False
+        
+        # for char in s:
+        #     counter[char] = counter.get(char,0) + 1
+        
+        # for char in t:
+        #     if (char not in counter) or (counter[char] == 0):
+        #         return False
+            
+        #     counter[char] -= 1
+
+        # return True
+        
+
+        # Second Solution: ASCII
+        # counter = [0] * 26
+
+        # if len(s) != len(t):
+        #     return False
+
+        # for char in s:
+        #     counter[ord(char) - ord('a')] += 1
+
+        # for char in t:
+        #     if counter[ord(char) - ord('a')] == 0:
+        #         return False
+            
+        #     counter[ord(char) - ord('a')] -= 1
+        
+        # return True
+
         
