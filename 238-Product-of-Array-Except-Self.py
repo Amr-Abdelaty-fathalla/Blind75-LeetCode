@@ -1,0 +1,23 @@
+import math
+import copy
+
+class Solution:
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        # Sol O(n)
+        n = len(nums)
+        ans = [1] * n
+
+        l = 1
+        for i in range(n):
+            ans[i] = l
+            l *= nums[i]
+        
+        r = 1
+        for i in range(n-1,-1,-1):
+            ans[i] *= r
+            r *= nums[i]
+        
+        return ans
+
+        
+        
