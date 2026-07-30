@@ -1,6 +1,3 @@
-import math
-import copy
-
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         # Sol O(n)
