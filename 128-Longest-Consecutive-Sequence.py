@@ -6,6 +6,9 @@ class Solution:
         if len(nums) == 0:
             return 0
         
+        if len(nums) == 1:
+            return 1
+        
         nums.sort()
      
         for idx in range(1, len(nums)):
@@ -16,7 +19,7 @@ class Solution:
             else:
                 long_seq.append(cnt)
                 cnt = 1
-            
+        
         long_seq.append(cnt)    
         return max(long_seq)
 
