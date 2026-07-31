@@ -20,7 +20,8 @@ class Solution:
                 long_seq.append(cnt)
                 cnt = 1
         
-        long_seq.append(cnt)    
+        if (nums[-1] == nums[-2]) or (nums[-1] - 1 == nums[-2]):
+            long_seq.append(cnt)    
         return max(long_seq)
 
 
